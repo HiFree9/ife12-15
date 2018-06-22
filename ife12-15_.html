@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹性盒子布局</title>
+	<link rel="stylesheet" href="styles/ife12-15.css">
+</head>
+<body>
+	  <!-- 边导航 -->
+	  <div class="side_bar">
+	  	   <ul class="items">
+	  	   	  <li class="item"></li>
+	  	   	  <li class="item"></li>
+	  	   	  <li class="item"></li>
+	  	   	  <li class="item"></li>	  	   	  
+	  	   </ul>
+	  	   <div class="bottom_item"><img src="images/Grid.png"><img src="images/Settings.png"></div>
+	  </div>
+
+	  <!-- 左导航 -->
+	  <div class="leftside_bar">
+	  	 <div class="boxs">
+	  	   <div class="box">
+	  	   	    <ul>
+	  	   	    	<li class="title">MENU<img class="settings" src="images/Settings.png"></li>
+	  	   	    	<li>Overview</li>
+	  	   	    	<li>Sales <span class="icon">54</span></li>
+	  	   	    	<li>Your Staff</li>
+	  	   	    	<li>Analytics & Targeting</li>
+	  	   	    	<li>What's New</li>
+	  	   	    </ul>
+	  	   </div>
+	  	   <div class="box icon_box">
+	  	   	    <ul>
+	  	   	    	<li class="title">YOUR PRODUCTS<img class="settings" src="images/settings.png"></li>
+	  	   	    	<li>Books</li>
+	  	   	    	<li>Tutorials</li>
+	  	   	    	<li>Stocks</li>
+	  	   	    	<li>Infographics</li>
+	  	   	    </ul>
+	  	   </div>
+	  	   <!-- D -->
+	  	   <div class="box">
+	  	   	    <ul>
+	  	   	    	<li class="title">DASHBOARD<img class="settings" src="images/settings.png"></li>
+	  	   	    	<li>Message <span class="icon">21</span></li>
+	  	   	    	<li>Connections</li>
+	  	   	    	<li>Integrations <span class="icon circle_icon">!</span></li>
+	  	   	    	<li>Account Settings</li>
+	  	   	    	<li>App Settings</li>
+	  	   	    </ul>
+	  	   </div>
+	  	 </div>
+	  	 <!-- 底部的固定进度条 -->
+         <div class="bottom_box">
+         	  <p>Monthly Goals<span class="rtMoney">$580/$3200</span></p>
+         	  <div class="progress">
+         	  	    <div class="progress_bar"></div>
+         	  </div>
+         </div>
+	  </div>
+
+	  <!-- 右侧内容 -->
+	  <div class="content">
+	  	    <!-- 固定的顶部导航 -->
+	        <div class="topside_bar">
+	        	 <span class="title">Message</span>
+	        	 <div class="users">
+	        	 	   <img class="user_img" src="images/user1.png"> 
+	        	 	   <div class="user">
+	        	 	   	     <a class="user_name">Jordan J.</a> <br>
+                             <span class="custome_type">Administrator</span>
+	        	 	   </div>
+	        	 	   <img class="list" src="images/dropdown.png">
+	        	 </div>
+	        </div>
+            
+            <!-- 内容区域 -->
+            <div class="flex_box">
+              <!-- 固定的左侧区域 -->
+              <div class="left_content">  
+            	  <!-- search -->
+            	  <div class="search_box">
+            	  	<div class="search">
+            	  	  <input type="text" placeholder="Search">
+            	  	  <button class="search_btn"></button>
+            	  	</div>
+            	  </div>
+                  
+
+                  <!-- 左侧内容区域 -->
+
+                  <!-- 
+                      当鼠标点击右侧内容的时候，会激活active这个类
+                      并且为user_name下面的第一个span添加一个user_icon 并且为a添加一个active_name
+                      并且div.word里面的span添加一个circle_icon的类
+                   -->
+                  <div class="box active">
+                  	   <div class="users">
+                  	   	    <img class="user_img" src="images/user2.png">
+                  	   	    <div class="user_name">
+                  	   	    	<span class="user_icon"></span><a class="active_name" href="#">Bessie Berry</a>
+                  	   	    	<p>Twitter</p>
+                  	   	    </div>
+                  	   	    <span class="user_time">3m</span>
+                  	   </div>
+                  	   <div class="word">
+                  	   	    <p  class="size">I pay for the 4Mb/sec down, 512 Kb/sec up service from 02, In fact, it's relatively quick, and stable...
+                  	   	    </p>
+                  	   	    <span class="circle_icon">4</span> 
+                  	   </div>
+                  </div>
+
+                  <div class="box">
+                  	   <div class="users">
+                  	   	    <img class="user_img" src="images/20.png">
+                  	   	    <div class="user_name">
+                  	   	    	<span class=""></span><a class="" href="#">Bessie Berry</a>
+                  	   	    	<p>Twitter</p>
+                  	   	    </div>
+                  	   	    <span class="user_time">8m</span>
+                  	   </div>
+                  	   <div class="word">
+                  	   	    <p>I pay for the 4Mb/sec down, 512 Kb/sec up service from 02, In fact, it's relatively
+                  	   	       quick, and stable...
+                  	   	    </p>                	   	    
+                  	   </div>
+                  </div>
+ 
+                  <div class="box">
+                  	   <div class="users">
+                  	   	    <img class="user_img" src="images/14.png">
+                  	   	    <div class="user_name">
+                  	   	    	<span class=""></span><a class="" href="#">Bessie Berry</a>
+                  	   	    	<p>Twitter</p>
+                  	   	    </div>
+                  	   	    <span class="user_time">Yesterday</span>
+                  	   </div>
+                  	   <div class="word">
+                  	   	    <p>I pay for the 4Mb/sec down, 512 Kb/sec up service from 02, In fact, it's relatively
+                  	   	       quick, and stable...
+                  	   	    </p>
+                  	   	    <span></span>                	   	    
+                  	   </div>
+                  </div>
+
+                  <div class="box">
+                  	   <div class="users">
+                  	   	    <img class="user_img" src="images/128-6.png">
+                  	   	    <div class="user_name">
+                  	   	    	<span class=""></span><a class="" href="#">Bessie Berry</a>
+                  	   	    	<p>Twitter</p>
+                  	   	    </div>
+                  	   	    <span class="user_time">Yesterday</span>
+                  	   </div>
+                  	   <div class="word">
+                  	   	    <p>I pay for the 4Mb/sec down, 512 Kb/sec up service from 02, In fact, it's relatively
+                  	   	       quick, and stable...
+                  	   	    </p>
+                  	   	    <span></span>                	   	    
+                  	   </div>
+                  </div>
+
+                  <div class="box">
+                  	   <div class="users">
+                  	   	    <img class="user_img" src="images/23.png">
+                  	   	    <div class="user_name">
+                  	   	    	<span class=""></span><a class="" href="#">Bessie Berry</a>
+                  	   	    	<p>Twitter</p>
+                  	   	    </div>
+                  	   	    <span class="user_time">13 Jun</span>
+                  	   </div>
+                  	   <div class="word">
+                  	   	    <p>I pay for the 4Mb/sec down, 512 Kb/sec up service from 02, In fact, it's relatively
+                  	   	       quick, and stable...
+                  	   	    </p> 
+                  	   	    <span></span>               	   	    
+                  	   </div>
+                  </div>
+
+                  <div class="box">
+                  	   <div class="users">
+                  	   	    <img class="user_img" src="images/7.png">
+                  	   	    <div class="user_name">
+                  	   	    	<span class=""></span><a class="" href="#">Bessie Berry</a>
+                  	   	    	<p>Twitter</p>
+                  	   	    </div>
+                  	   	    <span class="user_time">12 Jun</span>
+                  	   </div>
+                  	   <div class="word">
+                  	   	    <p>I pay for the 4Mb/sec down, 512 Kb/sec up service from 02, In fact, it's relatively
+                  	   	       quick, and stable...
+                  	   	    </p> 
+                  	   	    <span></span>               	   	    
+                  	   </div>
+                  </div>
+
+                  <div class="box">
+                  	   <div class="users">
+                  	   	    <img class="user_img" src="images/21.png">
+                  	   	    <div class="user_name">
+                  	   	    	<span class=""></span><a class="" href="#">Bessie Berry</a>
+                  	   	    	<p>Twitter</p>
+                  	   	    </div>
+                  	   	    <span class="user_time">9 Jun</span>
+                  	   </div>
+                  	   <div class="word">
+                  	   	    <p>I pay for the 4Mb/sec down, 512 Kb/sec up service from 02, In fact, it's relatively
+                  	   	       quick, and stable...
+                  	   	    </p>  
+                  	   	    <span></span>              	   	    
+                  	   </div>
+                  </div>
+              </div>
+
+              <!-- right_content -->
+              <div class="right_content">
+                   <div class="top_control">
+                   	    <div class="user_name">
+                   	    	  Bessie Berry <span class="user_icon"></span>
+                   	    </div>
+                   	    <div class="rt_btn">
+                   	    	  <div class="btn three_btn">
+                   	    	  	  <button><img src="images/man.png"></button>
+                   	    	  	  <button><img src="images/top.png"></button>
+                   	    	  	  <button><img src="images/del.png"></button>
+                   	    	  </div>
+                   	    	  <span class="number">1 of 28</span>
+                   	    	  <div class="btn two_btn">
+                   	    	  	  <button><img src="images/right.png"></button>
+                   	    	  	  <button><img src="images/left.png"></button>
+                   	    	  </div>
+                   	    </div>
+                   </div>
+
+                    <!-- newest -->
+                <div class="dynamic newest">
+                	  <div class="row">
+                	  	   <img class="user_img" src="images/user2.png">
+                	  	   <div class="word">
+                	  	   	   <div class="title"><a class="user_name" href="#">Bessie Berry</a>
+                	  	   	   	<span class="time">8:31 AM</span>
+                	  	   	   </div>
+                	  	   	   Hi guys lve got the 02 package and have really slow internet.A
+	  	    	   	    	   speed check online said i can get 3mbps but it seems more like 0.5
+	  	    	   	    	   these days.justfklfj j fjlsjfkdj kfsfjskfjdskfjskfjskfjsdkfjsfffff
+	  	    	   	    	   fsfsfs ffsfff fsf f sfsfs fs f ff sf fs fs sfsfsfsfsf  fsfsfffff\
+	  	    	   	    	   ffffffff ffffff  ffffff  ffsf sf sf sf s
+                	  	   </div>
+                	  </div>
+                	  <div class="row">
+                	  	   <img class="user_img" src="images/user1.png">
+                	  	   <div class="word">
+                	  	   	   <div class="title">
+                	  	   	    <a class="user_name" href="#">Jordan Jackson</a>
+                	  	   	   	<span class="time">8:31 AM</span>
+                	  	   	   </div>
+                	  	   	   Hi guys lve got the 02 package and have really slow internet.A
+	  	    	   	    	   speed check online said i can get 3mbps but it seems more like 0.5
+	  	    	   	    	   these days.justfklfj j fjlsjfkdj kfsfjskfjdskfjskfjskfjsdkfjsfffff
+	  	    	   	    	   fsfsfs ffsfff fsf f sfsfs fs f ff sf fs fs sfsfsfsfsf  fsfsf
+	  	    	   	    	   Hi guys lve got the 02 package and have really slow internet.A
+	  	    	   	    	   speed check online said i can get 3mbps but it seems more like 0.5
+	  	    	   	    	   these days.justfklfj j fjlsjfkdj kfsfjskfjdskfjs kfjskfjs dkfjsfffff
+	  	                       f f fs fsf sfs fsf  fs dada adadada fs fs sf f fa s fsa fsa fs fds 
+	  	                       fa fa sad fdsa f sfdaf dad ad ad a da a a dad ad a da a a da da 
+	  	                       d adad ad ad a dad fa fa sad fdsa f sfdaf dad ad ad a da a a dad a
+	  	                       d a da a a da da
+                	  	   </div>
+                	  </div>          	  
+                </div>
+                
+                <!-- Tuesday -->
+                <div class="base_line tuesday">
+                	  <p>Tuesday</p>
+                </div>
+
+                <div class="dynamic">
+                	   <div class="row">
+                	  	   <img class="user_img" src="images/user2.png">
+                	  	   <div class="word">
+                	  	   	   <div class="title"><a class="user_name" href="#">Bessie Berry</a>
+                	  	   	   	<span class="time">8:31 AM</span>
+                	  	   	   </div>
+                	  	   	   Hi guys lve got the 02 package and have really slow internet.A
+	  	    	   	    	   speed check online said i can get 3mbps but it seems more like 0.5
+	  	    	   	    	   these days.justfklfj j fjlsjfkdj kfsfjskfjdskfjskfjskfjsdkfjsfffff
+	  	    	   	    	   fsfsfs
+                	  	   </div>
+                	  </div>
+                	  <div class="row">
+                	  	   <img class="user_img" src="images/user1.png">
+                	  	   <div class="word">
+                	  	   	   <div class="title">
+                	  	   	    <a class="user_name" href="#">Jordan Jackson</a>
+                	  	   	   	<span class="time">8:31 AM</span>
+                	  	   	   </div>
+                	  	   	   <p>Hi guys lve got the 02 package and have really slow internet.A
+	  	    	   	    	   speed check online said i can get 3mbps but it seems more like 0.5
+	  	    	   	    	   these days.justfklfj j fjlsjfkdj kfsfjskfjdskfjskfjskfjsdkfjsfffff
+	  	    	   	    	   fsfsfs ffsfff fsf f sfsfs fs f ff sf fs fs sfsfsfsfsf  fsfsf
+	  	    	   	    	   Hi guys lve got the 02 package and have really slow internet.A
+	  	    	   	    	   speed check online said i can get 3mbps but it seems more like 0.5
+	  	    	   	    	   these days.justfklfj j fjlsjfkdj kfsfjskfjdskfjskfjskfjsdkfjsfffff
+	  	                       f f fs fsf sfs fsf  fs dada adadada
+	  	                       </p>
+	  	                        <a class="img_box">
+                	  	   	       <img src="images/banner2.png">
+                	  	   	       <!-- 遮罩 -->
+                	  	   	       <div class="layer">
+                	  	   	       	  <span class="search_icon"></span>
+                	  	   	       </div>
+                	  	        </a>
+                	  	        <a class="img_box">
+                	  	           <img src="images/banner1.png">
+                	  	   	       <!-- 遮罩 -->
+                	  	   	       <div class="layer">
+                	  	   	       	  <span class="search_icon"></span>
+                	  	   	       </div>
+                	  	        </a>
+                	  	   </div>               	  	  
+                	  </div>  
+                </div>
+               
+                <!-- New Messages -->
+                <div class="base_line new_messages">
+                	   <p>New Messages</p>
+                </div>
+
+
+                <div class="dynamic">
+                	  <div class="row">
+                	  	   <img class="user_img" src="images/user2.png">
+                	  	   <div class="word">
+                	  	   	   <div class="title"><a class="user_name" href="#">Bessie Berry</a>
+                	  	   	   	<span class="time">8:31 AM</span>
+                	  	   	   </div>
+                	  	   	   Hi guys lve got the 02 package and have really slow internet.A
+	  	    	   	    	   speed check online said i can get 3mbps but it seems more like 0.5
+	  	    	   	    	   these days.justfklfj j fjlsjfkdj kfsfjskfjdskfjskfjskfjsdkfjsfffff
+	  	    	   	    	   fsfsfs
+                	  	   </div>
+                	  </div>
+                      <!-- 添加资料 -->
+                      <div class="add">
+                      	    <button></button><input type="text">
+                      </div>
+                </div>	
+              </div>
+                           
+            </div>
+	  </div>
+</body>
+</html>

@@ -1,0 +1,597 @@
+*{
+	 margin:0;
+	 padding:0;
+	 box-sizing: border-box;
+}
+
+a{
+	 text-decoration: none;
+}
+a:link,a:active,a:visited{
+	 color: #585d68;
+}
+body{
+	 height: 100%;
+	 position: relative;
+}
+
+ul{
+	 list-style: none;
+}
+
+input,button{
+	 border: none;
+	 outline: none;
+}
+
+/*边导航*/
+.side_bar {
+	position:fixed;
+    display:block;
+    left:0;
+    top:0;
+    bottom:0;
+    width:200px;
+    background-color: #1d2531;
+}
+
+/*边导航固定图标*/
+.side_bar .items{
+	 position: fixed;
+	 left: 20px;
+	 top: 20px;
+}
+
+.side_bar .items .item{
+	  margin-bottom: 20px;
+	  width: 60px;
+	  height: 60px;
+	  border-radius: 50%;
+}
+
+.side_bar .items .item:nth-of-type(1){	
+	background: url(../images/Item-1.png) center center no-repeat;
+	background-color: #1991eb;
+}
+
+.side_bar .items .item:nth-of-type(2){
+	background:url(../images/Item-2.png) center center no-repeat;
+	background-color: #7f5be6;
+}
+
+.side_bar .items .item:nth-of-type(3){
+	background: url(../images/Item-3.png) center center no-repeat;
+	background-color: #f45438;
+}
+
+.side_bar .items .item:nth-of-type(4){
+    background: url(../images/Add-icon.png) center center no-repeat;
+    border:3px solid #2d3848;
+}
+
+.side_bar .bottom_item{
+	 position: fixed;
+	 bottom: 20px;
+	 left: 26px;
+}
+
+.side_bar .bottom_item img:first-child{
+	 margin-right: 18px;
+}
+
+
+/*左导航*/
+.leftside_bar {
+	position:fixed;
+    display:block;
+    left:100px;
+    top:0;
+    bottom:0;
+    width:250px;
+	height: 100%;
+	background-color: #222c3c;
+}
+
+.leftside_bar .boxs{
+	margin: 30px;
+	font-size: 14px;
+	color: #b7c0cd;
+}
+
+.leftside_bar .boxs .box{
+	margin-top: 23px;
+	border-bottom: 1px solid #2a3547;
+}
+
+/*
+因为垂直的2个div的相邻的margin会被最大值覆盖 所以不用设置第一个的margin-top为0
+.leftside_bar .boxs .box:first-child{
+	 margin-top: 0;
+}*/
+
+/*为每个li设置行高*/
+.leftside_bar .boxs .box ul li{
+	 line-height: 36px;
+}
+
+/*为最后一个li设置填充距离*/
+.leftside_bar .boxs .box ul li:last-child{
+    padding-bottom: 10px;
+}
+
+.leftside_bar .boxs .box .title{
+	font-size: 12px;
+    color: #5b6779;
+    line-height: 16px;
+    padding-bottom: 10px;
+} 
+
+.leftside_bar .boxs .box .title .settings{
+    float: right;  
+}
+
+.leftside_bar .boxs .box .icon{
+	display: inline-block;
+	float: right;
+	width: 32px;
+	height: 24px;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 24px;
+    margin-top: 4px;
+    background-color: #1991eb;
+}
+
+.leftside_bar .boxs .box .circle_icon{
+    width: 24px;
+    background-color: #f45438;
+}
+
+/*为第二个盒子前面设置图标*/
+.leftside_bar .boxs .icon_box li{
+	 padding-left: 26px;
+}
+
+.leftside_bar .boxs .icon_box li:nth-of-type(2){
+     background: url(../images/Book-of-Wisdom.png) no-repeat 0 10px;
+}
+
+.leftside_bar .boxs .icon_box li:nth-of-type(3){
+     background: url(../images/Video-Camera.png) no-repeat 0 10px;
+}
+
+.leftside_bar .boxs .icon_box li:nth-of-type(4){
+     background: url(../images/Painting.png) no-repeat 0 10px;
+}
+
+.leftside_bar .boxs .icon_box li:nth-of-type(5){
+     background: url(../images/Chart.png) no-repeat 0 10px;
+}
+/*底部的进度条*/
+
+.leftside_bar .bottom_box{
+	position: fixed;
+	bottom: 23px;
+	left: 130px;
+	font-size: 14px;
+	color: #b7c0cd;
+}
+
+.leftside_bar .bottom_box .rtMoney{
+	margin-left: 22px;
+}
+
+.leftside_bar .bottom_box .progress{
+	width: 191px;
+    height: 4px;
+	background-color: rgba(71,83,100,0.3);
+	border-radius: 2px;
+}
+
+.leftside_bar .bottom_box .progress .progress_bar{
+	width: 20%;
+	height: 100%;
+	margin-top: 14px;
+	background-color: #7f5be6;
+}
+
+/*右导航*/
+.content{
+	margin-left:350px;
+}
+
+/*固定的顶部导航*/
+.content .topside_bar{
+	height: 80px;
+	width: calc(100% - 350px);
+	box-shadow: 0px 1px 1px 0px 
+	rgba(0, 0, 0, 0.05);
+	padding:0 30px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: white;
+}
+
+.content .topside_bar .title{
+	float: left;
+	line-height: 80px;
+}
+
+.content .topside_bar .users{
+	float: right;
+	margin: 15px 0;
+	height: 50px;
+}
+
+.content .topside_bar .users .user_img,.user,.user_list{
+	 float: left;
+}
+
+.content .topside_bar .users .user_img{
+	 border-radius: 50%;
+	 margin-right: 16px;
+}
+
+.content .topside_bar .users .user{
+	 margin-right: 39px;
+}
+
+.content .topside_bar .users .user .user_name{
+	 font-size: 16px;
+	 color: #2399f1;
+}
+
+.content .topside_bar .users .user .custome_type{
+	 font-size: 14px;
+	 color: #b5b5b5;
+}
+
+.content .topside_bar .users .list{
+	 padding-top: 16px;
+}
+
+
+/*内容区域*/
+.content  .flex_box{
+	 margin-top: 80px;
+}
+
+/*左侧内容区域*/
+
+/*左侧的search*/
+.content .flex_box .left_content{
+	 width: 400px;
+	 float: left;
+}
+
+.content .flex_box .left_content .search_box{
+     border-bottom: 1px solid #e6e9ec;
+     border-right: 1px solid #e6e9ec;
+     overflow: hidden;
+}
+
+.content .flex_box .left_content .search_box .search{
+	 margin:15px 30px 19px;
+	 width: 340px;
+	 height: 36px;
+	 border:1px solid #e6e9ec;
+	 border-radius: 4px;
+	 overflow: hidden;
+}
+
+.content .flex_box .left_content .search_box .search input[type]{
+	float: left;
+	line-height: 34px;
+	padding-left: 15px;
+	width: 300px;
+}
+
+.content .flex_box .left_content .search_box .search .search_btn{
+	 width: 38px;
+	 height: 34px;
+	 float: left;
+	 background-color: white;
+	 background: url(../images/Search-icon.png) center center no-repeat;
+}
+
+/*左侧内容区域*/
+.content .flex_box .left_content .box{
+	border-right: 1px solid #e6e9ec;
+	border-bottom: 1px solid #e6e9ec;
+	padding:15px 23px 23px 30px;
+	height: 130px;
+	width: 100%;
+}
+
+.content .flex_box .left_content .active{
+	 border-left: 3px solid #1991eb;
+}
+
+.content .flex_box .left_content .box .users{
+	 height: 46px;
+}
+
+.content .flex_box .left_content .box .users .user_img, .user_name{
+	 float: left; 
+}
+.content .flex_box .left_content .box .users .user_time{
+	 overflow: hidden;
+}
+
+.content .flex_box .left_content .box .users .user_img{
+	 width: 46px;
+	 height: 46px;
+	 border-radius: 50%;
+	 margin-right: 24px;
+}
+
+.content .flex_box .left_content .box .users .user_name{
+	 line-height: 23px;
+}
+
+.content .flex_box .left_content .box .users .user_name .user_icon{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #1991eb;
+	margin-right: 8px;
+}
+
+.content .flex_box .left_content .box .users .user_name a{
+	color: #585d68;
+	font-size: 16px;
+}
+
+.content .flex_box .left_content .box .users .user_name .active_name{
+    color: #2399f1;
+}
+
+.content .flex_box .left_content .box .users .user_name p{
+	 font-size: 14px;
+	 color: #b5b5b5;
+}
+
+.content .flex_box .left_content .box .users .user_time{
+    color: #7f8fa4;
+    font-size: 14px;
+    float: right;
+}
+
+/*左侧内容里面的每个box里面的文字和图标设置*/
+.content .flex_box .left_content .box .word{
+	 font-size: 14px;
+	 color: #585d68;
+     margin-top: 14px;
+     height: 37px;
+     overflow: hidden;
+}
+
+.content .flex_box .left_content .box .word p{
+	 float: left;
+}
+
+.content .flex_box .left_content .box .word .size{
+    width: 307px;
+    margin-right: 12px;
+}
+
+.content .flex_box .left_content .box .word .circle_icon{
+	 display: inline-block;
+	 width: 24px;
+	 height: 24px;
+	 border-radius: 50%;
+	 background-color: #1991eb;
+	 text-align: center;
+	 line-height: 24px;
+	 color: white;
+	 margin-top: 8px;
+}
+
+
+/*右侧内容*/
+.content .flex_box .right_content{
+	 overflow: hidden;
+}
+
+/*设置的是在右侧内容里面的头部 上面有各种按钮 对下面的文章进行操作的按钮*/
+.content .flex_box .right_content .top_control{
+	height: 71px;
+	border-bottom: 1px solid #e6e9ec;
+	padding: 0 30px;
+}
+
+.content .flex_box .right_content .top_control .user_name{
+	float: left;
+	line-height: 71px;
+}
+
+.content .flex_box .right_content .top_control .user_name .user_icon{
+	display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #1bb934;
+    margin-left: 9px;
+}
+
+.content .flex_box .right_content .top_control .rt_btn{
+	 float: right;
+	 margin: 19px 0;
+}
+
+.content .flex_box .right_content .top_control .rt_btn .btn,.number{
+	 float: left;
+}
+
+.content .flex_box .right_content .top_control .rt_btn .btn{
+	 display: flex;
+	 border:1px solid #ced0da;
+	 height: 32px;
+	 border-radius: 2px;
+}
+
+.content .flex_box .right_content .top_control .rt_btn .btn button{
+	 flex-grow: 1;
+	 border-right: 1px solid #ced0da;
+	 background-color: #f1f3f7;
+}
+
+.content .flex_box .right_content .top_control .rt_btn .btn button:last-child{
+	 border-right: none;
+}
+
+.content .flex_box .right_content .top_control .rt_btn .three_btn{
+	 width: 109px;
+	 margin-right: 24px;
+}
+
+.content .flex_box .right_content .top_control .rt_btn .two_btn{
+	 width: 73px;
+}
+
+.content .flex_box .right_content .top_control .rt_btn .number{
+	 padding: 0 21px;
+	 border-left: 1px solid rgba(206,208,218,0.3);
+	 line-height: 32px;
+	 font-size: 14px;
+	 color: #56688a;
+}
+
+/*设置的每一个大的box里面 有2个row 里面显示发布的内容 */
+.content .flex_box .right_content .dynamic{
+	 padding: 26px 100px 14px 100px;
+
+}
+
+.content .flex_box .right_content .dynamic .row{
+     width:100%;
+     margin-bottom: 19px;
+}
+
+.content .flex_box .right_content .dynamic .row .user_img{
+	 float: left;
+	 margin-right: 21px;
+	 width: 46px;
+	 height: 46px;
+	 border-radius: 50%;
+}
+
+.content .flex_box .right_content .dynamic .row .word{
+	 overflow: hidden;
+	 
+	 font-size: 14px;
+}
+
+.content .flex_box .right_content .dynamic .row .word .title{
+	 line-height: 30px;
+}
+
+.content .flex_box .right_content .dynamic .row .word .title .user_name{
+	 font-size: 16px;
+	 color: #585d68;
+	 padding-right: 9px;
+}
+
+.content .flex_box .right_content .dynamic .row .word .title .time{
+	 font-size: 14px;
+	 color: #7f8fa4;
+}
+
+/*tuesday 基线*/
+.content .flex_box .right_content .base_line{
+	width: 100%;
+	border-top: 1px solid rgba(159,169,186,0.4);
+	position: relative;
+}
+
+.content .flex_box .right_content .base_line p{
+	 width: 120px;
+	 line-height: 27px;
+	 text-align: center;
+	 background-color: white;
+	 color: #7f8fa4;
+	 font-size: 14px;
+	 position: absolute;
+	 left: 50%;
+	 top: -14px;
+	 margin-left: -60px;
+}
+
+/*tuesday下面的内容*/
+/*这里设置的是鼠标滑过图片的时候 显示打开的图标和遮罩层*/
+.content .flex_box .right_content .dynamic .row .word .img_box{
+	 display: block;
+     margin-top: 20px;
+     border-radius: 4px;
+     float: left;
+     height: 100px;
+     width: 156px;
+     overflow: hidden;
+     margin-right: 20px;
+     position: relative;
+}
+
+.content .flex_box .right_content .dynamic .row .word .img_box .layer{
+	 position: absolute;
+	 top: 0;
+	 width: 100%;
+	 height: 100%;
+	 background-color: rgba(0,0,0,0.3);
+	 display: none;
+}
+
+.content .flex_box .right_content .dynamic .row .word .img_box .layer .search_icon{
+	 position: absolute;
+	 left: 50%;
+	 top: 50%;
+	 margin-left: -25px;
+	 margin-top: -25px;
+	 display: inline-block;
+	 width: 50px;
+	 height: 50px;
+	 border-radius: 50%;
+	  background: url(../images/Open-icon.png) center center no-repeat;
+	 background-color: rgba(255,255,255,0.3);
+	
+}
+
+/*鼠标滑过图片 显示遮罩*/
+.content .flex_box .right_content .dynamic .row .word .img_box:hover .layer{
+	 display: block;
+}
+
+/*设置news  messages*/
+.content .flex_box .right_content .new_messages{
+	 border-top: 1px solid rgba(35,153,241,0.4);
+	
+}
+
+.content .flex_box .right_content .new_messages p{
+	  color: #2399f1;
+}
+
+/*new messages下面的内容*/
+
+/*添加内容的方框*/
+.content .flex_box .right_content .dynamic .add{
+	 height: 54px;
+	 width: 100%;
+	 border:1px solid #ddd;
+	 border-radius: 4px;	
+	 overflow: hidden; 
+}
+
+.content .flex_box .right_content .dynamic .add button{
+	 height: 52px;
+	 width: 54px;
+	 background: url(../images/Add-icon.png) center center no-repeat; 
+	 background-color: white;
+	 float: left;
+}
+
+.content .flex_box .right_content .dynamic .add input{
+	 line-height: 54px;
+	 width: 800px;
+}
